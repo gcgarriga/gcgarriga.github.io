@@ -3,43 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Gemma Garriga — AI Leader, Researcher & Entrepreneur</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Webpage</h1>
-        <nav>
-            <ul>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">GG</a>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#ventures">Ventures</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#speaking">Speaking</a></li>
             </ul>
-        </nav>
-    </header>
-    
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Gemma Garriga</h1>
+            <p class="hero-title">VP of Engineering at GitHub</p>
+            <p class="hero-tagline">Building businesses, products, and teams in applied AI.<br>Bridging the gap between research and industry.</p>
+            <div class="hero-links">
+                <a href="https://www.linkedin.com/in/gemmagarriga/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/gcgarriga" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a href="https://x.com/gcgarriga" target="_blank" rel="noopener" aria-label="X / Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://scholar.google.com/citations?user=kqj9DigAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Something here</p>
-        </section>
-        
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <!-- Projects will go here -->
+
+        <section class="section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p>I'm a technology executive and researcher with over 15 years of experience at the intersection of artificial intelligence, business transformation, and engineering leadership. My career spans a decade of academic ML research, building and leading AI teams at global enterprises, founding a startup, and now leading engineering at one of the world's most important developer platforms.</p>
+                <p>I'm passionate about harnessing the transformative power of AI to create impactful solutions. My expertise covers machine learning, data science, generative AI, and the ethical implications of AI in business. I believe in building products and teams that bridge cutting-edge research with real-world impact.</p>
+                <div class="about-education">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>PhD in Machine Learning &amp; Computer Science</strong> — UPC Barcelona</li>
+                        <li><strong>Executive MBA</strong> — INSEAD</li>
+                        <li><strong>MSc in Computer Science &amp; Statistics</strong></li>
+                    </ul>
+                </div>
             </div>
         </section>
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: email</p>
-            <p>GitHub: <a href="https://github.com/gcgarriga">GitHub</a></p>
+
+        <section class="section" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 — Present</span>
+                        <h3>VP of Engineering</h3>
+                        <p class="timeline-company">GitHub</p>
+                        <p class="timeline-desc">Leading AI & Engineering teams at the world's largest developer platform, shaping the future of AI-assisted software development.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 — 2025</span>
+                        <h3>Director of Applied AI</h3>
+                        <p class="timeline-company">Google — Cloud CTO Office</p>
+                        <p class="timeline-desc">Shaped technology strategy driving innovation and co-creation between Google and businesses worldwide. Led teams tackling complex challenges across video/audio streaming, e-commerce, mobility, and generative AI.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 — 2021</span>
+                        <h3>Chief Digital Officer</h3>
+                        <p class="timeline-company">Allianz Trade</p>
+                        <p class="timeline-desc">Drove digital transformation across the global trade credit insurance leader.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2017 — 2019</span>
+                        <h3>Global Head of AI &amp; Advanced Business Analytics</h3>
+                        <p class="timeline-company">Allianz</p>
+                        <p class="timeline-desc">Built and led Allianz's AI team, bringing the company and insurance industry up to AI speed. Developed guidelines for ethical AI mapped to European regulations.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2013 — 2017</span>
+                        <h3>Data Science Manager &amp; Data Scientist</h3>
+                        <p class="timeline-company">Allianz</p>
+                        <p class="timeline-desc">Transitioned from research to industry, building data science capabilities from the ground up within one of Europe's largest insurers.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2010 — 2013</span>
+                        <h3>Senior ML Research Scientist (CR1, Tenured)</h3>
+                        <p class="timeline-company">INRIA — French National Institute for CS &amp; Applied Mathematics</p>
+                        <p class="timeline-desc">Research on sequential event data, time series analysis, and graph data mining. Published extensively in top-ranked conferences and journals.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2006 — 2010</span>
+                        <h3>ML Research Scientist</h3>
+                        <p class="timeline-company">Helsinki Institute for Information Technology</p>
+                        <p class="timeline-desc">Post-doctoral research in machine learning, data science, and optimization.</p>
+                    </div>
+                </div>
+
+            </div>
         </section>
+
+        <section class="section" id="ventures">
+            <h2 class="section-title">Ventures &amp; Entrepreneurship</h2>
+            <div class="cards-grid">
+
+                <div class="card card-highlight">
+                    <span class="card-label">Co-Founder</span>
+                    <h3>Parlapp</h3>
+                    <p>A knowledge marketplace enabling person-to-person instant voice networking. Built for people with a question, a passion, or a desire to learn — connecting them through short, live audio exchanges. Launched in Paris, participated in the AWS Startup Loft Accelerator (Winter 2022).</p>
+                    <a href="https://parlapp.net" target="_blank" rel="noopener" class="card-link">parlapp.net</a>
+                </div>
+
+                <div class="card">
+                    <span class="card-label">Venture Advisor</span>
+                    <h3>AV8 Ventures</h3>
+                    <p>Advised deep tech startups on AI strategy, product-market fit, and scaling engineering teams. Supported the venture ecosystem bridging research and commercialization.</p>
+                </div>
+
+                <div class="card">
+                    <span class="card-label">Fellow</span>
+                    <h3>Deeptech Labs</h3>
+                    <p>Contributed to the venture builder ecosystem, supporting deep technology startups from concept to growth stage.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="research">
+            <h2 class="section-title">Research &amp; Impact</h2>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2,000+</span>
+                    <span class="stat-label">Citations</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years in AI</span>
+                </div>
+            </div>
+
+            <div class="research-content">
+                <div class="research-block">
+                    <h3>Research Areas</h3>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Data Science</span>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Sequential Data</span>
+                        <span class="tag">Graph Mining</span>
+                        <span class="tag">AI Ethics</span>
+                    </div>
+                </div>
+
+                <div class="research-block">
+                    <h3>Advisory Roles</h3>
+                    <ul>
+                        <li><strong>United Nations</strong> — Independent International Scientific Panel on AI</li>
+                        <li><strong>MCML</strong> — Scientific Advisory Board, Munich Center for Machine Learning</li>
+                    </ul>
+                </div>
+
+                <div class="research-block">
+                    <a href="https://scholar.google.com/citations?user=kqj9DigAAAAJ" target="_blank" rel="noopener" class="card-link">View publications on Google Scholar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="speaking">
+            <h2 class="section-title">Speaking</h2>
+            <p class="speaking-intro">Passionate speaker on AI for good, business applications of machine learning, and the ethical implications of data in the business world.</p>
+            <div class="speaking-list">
+
+                <div class="speaking-item">
+                    <h3>Keynote — Women in Data Science</h3>
+                    <p class="speaking-venue">Swiss Re Centre for Global Dialogue, Zurich</p>
+                    <p class="speaking-topic">"Insurance Business Transformation through Data Science"</p>
+                </div>
+
+                <div class="speaking-item">
+                    <h3>Invited Industry Talk — IEEE DSAA 2021</h3>
+                    <p class="speaking-venue">IEEE Data Science and Advanced Analytics Conference</p>
+                    <p class="speaking-topic">Transformation and leading businesses from the data angle — lessons from 8 years at Allianz and Euler Hermes.</p>
+                </div>
+
+                <div class="speaking-item">
+                    <h3>Guest Lecturer — UCLA Anderson School of Management</h3>
+                    <p class="speaking-venue">Los Angeles, CA</p>
+                    <p class="speaking-topic">Product Management in the age of AI.</p>
+                </div>
+
+            </div>
+        </section>
+
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Your Name</p>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/gemmagarriga/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/gcgarriga" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://x.com/gcgarriga" target="_blank" rel="noopener">X</a>
+                <a href="https://scholar.google.com/citations?user=kqj9DigAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+            </div>
+            <p class="footer-copy">&copy; 2025 Gemma Garriga</p>
+        </div>
     </footer>
+
 </body>
 </html>
