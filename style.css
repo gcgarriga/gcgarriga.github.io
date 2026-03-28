@@ -212,7 +212,7 @@ main {
 /* --- About --- */
 
 .about-content {
-    max-width: 65ch;
+    width: 100%;
 }
 
 .about-content p {
