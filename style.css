@@ -28,13 +28,13 @@ body {
 }
 
 a {
-    color: #f472b6;
+    color: #d8829e;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #f9a8d4;
+    color: #e7b3c6;
 }
 
 ul {
@@ -87,7 +87,7 @@ h1, h2, h3 {
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a.active {
-    color: #f472b6;
+    color: #d8829e;
 }
 
 /* --- Hero Section --- */
@@ -127,7 +127,7 @@ h1, h2, h3 {
 
 .hero-greeting {
     font-size: 1.1rem;
-    color: #f472b6;
+    color: #888;
     font-weight: 800;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -135,22 +135,22 @@ h1, h2, h3 {
 }
 
 .hero-name {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
+    font-size: clamp(1.65rem, 3.85vw, 2.6rem);
+    font-weight: 600;
     letter-spacing: -0.03em;
     margin-bottom: 0.5rem;
     color: #ffffff;
 }
 
 .hero-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: #b0b0b0;
     font-weight: 400;
     margin-bottom: 1.5rem;
 }
 
 .hero-tagline {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: #888;
     line-height: 1.8;
     margin-bottom: 2.5rem;
@@ -171,7 +171,7 @@ h1, h2, h3 {
 }
 
 .hero-links a:hover {
-    color: #f472b6;
+    color: #d8829e;
     transform: translateY(-2px);
 }
 
@@ -189,7 +189,7 @@ main {
 }
 
 .section-title {
-    font-size: 2.25rem;
+    font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 3rem;
@@ -204,7 +204,7 @@ main {
     left: 0;
     width: 40px;
     height: 3px;
-    background: #f472b6;
+    background: #d8829e;
     border-radius: 2px;
 }
 
@@ -215,7 +215,7 @@ main {
 }
 
 .about-content p {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     margin-bottom: 1.25rem;
 }
 
@@ -229,6 +229,18 @@ main {
     gap: 1.5rem;
 }
 
+.cards-grid--two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+@media (max-width: 640px) {
+    .cards-grid--two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -239,7 +251,7 @@ main {
 }
 
 .card:hover {
-    border-left-color: #f472b6;
+    border-left-color: #d8829e;
 }
 
 .card-label {
@@ -253,14 +265,14 @@ main {
 }
 
 .card h3 {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-weight: 600;
     margin: 0 0 0.75rem;
     color: #ffffff;
 }
 
 .card p {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: #a0a0a0;
     line-height: 1.7;
     margin: 0;
@@ -316,7 +328,7 @@ main {
     gap: 2.25rem;
 }
 
-.research-block h3 {
+.research-block > h3 {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -327,7 +339,7 @@ main {
 
 .research-block li {
     padding: 0.4rem 0;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: #c0c0c0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
@@ -349,18 +361,18 @@ main {
 .tag {
     display: inline-block;
     padding: 0.35rem 0.9rem;
-    background: rgba(244, 114, 182, 0.08);
-    border: 1px solid rgba(244, 114, 182, 0.15);
+    background: rgba(216, 130, 158, 0.08);
+    border: 1px solid rgba(216, 130, 158, 0.18);
     border-radius: 100px;
     font-size: 0.8rem;
-    color: #f472b6;
+    color: #d8829e;
     font-weight: 500;
 }
 
 /* --- Speaking --- */
 
 .speaking-intro {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     margin-bottom: 2rem;
     color: #c0c0c0;
 }
@@ -390,31 +402,31 @@ main {
 }
 
 .speaking-item:hover {
-    border-left-color: #f472b6;
+    border-left-color: #d8829e;
 }
 
 .speaking-item h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
     color: #ffffff;
 }
 
 .speaking-venue {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #777;
     margin-bottom: 0.4rem;
 }
 
 .speaking-topic {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #a0a0a0;
     font-style: italic;
 }
 
 .speaking-cta {
     margin-top: 2rem;
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: #888;
 }
 
@@ -447,7 +459,7 @@ main {
 }
 
 .footer-links a:hover {
-    color: #f472b6;
+    color: #d8829e;
 }
 
 .footer-copy {
@@ -507,7 +519,7 @@ main {
     }
 
     .hero-name {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
     }
 
 }
