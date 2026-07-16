@@ -230,8 +230,8 @@ main {
 }
 
 .about-content a {
-    color: #5C8577;
-    color: color-mix(in srgb, var(--accent) 65%, var(--bg));
+    color: #4D7267;
+    color: color-mix(in srgb, var(--accent) 85%, var(--bg));
 }
 
 .about-emphasis {
@@ -391,7 +391,7 @@ main {
 }
 
 .advisory-list span {
-    color: var(--text-faint);
+    color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 0.78rem;
     white-space: nowrap;
@@ -429,7 +429,7 @@ main {
 .speaking-venue {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--text-faint);
+    color: var(--text-muted);
 }
 
 .speaking-topic {
@@ -490,7 +490,7 @@ main {
     flex-wrap: wrap;
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--text-faint);
+    color: var(--text-muted);
 }
 
 .footer-links {
