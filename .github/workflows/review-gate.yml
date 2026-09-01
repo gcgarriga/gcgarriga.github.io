@@ -1,0 +1,147 @@
+name: review-gate
+
+# seed-repo.sh provenance marker — do not remove.
+# This language-neutral workflow is managed by the dotfiles seed path. Its
+# marker lets seed-repo.sh distinguish it from a user-owned workflow at the
+# same path; all other content may be customized.
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  marker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch policy from base branch
+        # Reads AGENTS.md from the base branch so a PR can't rewrite its own
+        # review policy to self-approve. Falls back to the PR's own copy only
+        # when the base branch has no AGENTS.md yet (e.g. the seeding PR).
+        run: |
+          git fetch --depth=1 origin "${{ github.event.pull_request.base.ref }}"
+          git show "origin/${{ github.event.pull_request.base.ref }}:AGENTS.md" > /tmp/base-agents.md 2>/dev/null || cp AGENTS.md /tmp/base-agents.md
+
+      - name: Validate the review-pass marker
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          import sys
+          from pathlib import Path
+
+          body = os.environ.get("PR_BODY", "")
+          marker = re.compile(r"<!--\s*review-pass(?:\s*:\s*([^>]*?))?\s*-->")
+          table_row = re.compile(
+              r"^\|\s*(Claude|GPT)\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`"
+              r"\s*\|\s*`([^`]+)`\s*\|$",
+              re.MULTILINE,
+          )
+          effort_order = ("low", "medium", "high", "xhigh", "max")
+
+          try:
+              policy = Path("/tmp/base-agents.md").read_text()
+          except OSError as exc:
+              print(f"cannot read AGENTS.md: {exc}")
+              sys.exit(1)
+          rows = table_row.findall(policy)
+          families = [family for family, _prefix, _reviewer, _effort in rows]
+          if sorted(families) != ["Claude", "GPT"]:
+              print("AGENTS.md has no usable Claude/GPT family table")
+              sys.exit(1)
+          routes = {
+              family: (prefix, reviewer, effort)
+              for family, prefix, reviewer, effort in rows
+          }
+
+          def family_of(model):
+              for family, (prefix, _reviewer, _effort) in routes.items():
+                  if prefix.endswith("*") and model.startswith(prefix[:-1]):
+                      return family
+              return None
+
+          for family, (prefix, reviewer, effort) in routes.items():
+              if not prefix.endswith("*") or effort not in effort_order:
+                  print(f"AGENTS.md has an invalid {family} route")
+                  sys.exit(1)
+              reviewer_family = family_of(reviewer)
+              if (
+                  "*" in reviewer
+                  or reviewer.split() != [reviewer]
+                  or reviewer_family is None
+                  or reviewer_family == family
+              ):
+                  print(f"AGENTS.md has a non-cross-family {family} reviewer")
+                  sys.exit(1)
+
+          matches = [
+              match
+              for line in body.splitlines()
+              if (match := marker.fullmatch(line.rstrip(" \t")))
+          ]
+          if len(matches) != 1:
+              print("review-pass marker missing or ambiguous")
+              sys.exit(1)
+
+          # Seeded repositories intentionally support only the canonical marker and the bare legacy marker with a skip reason.
+          suffix = matches[0].group(1)
+          skip_note = any(
+              line.startswith("Cross-family review skipped:")
+              and line.removeprefix("Cross-family review skipped:").strip()
+              for line in body.splitlines()
+          )
+          if suffix is None:
+              if skip_note:
+                  sys.exit(0)
+              print("legacy review-pass marker requires a skip reason")
+              sys.exit(1)
+
+          tokens = suffix.split()
+          if len(tokens) != 3 or any(token.count("=") != 1 for token in tokens):
+              print("review-pass marker has malformed or extra fields")
+              sys.exit(1)
+          pairs = [token.split("=", 1) for token in tokens]
+          fields = dict(pairs)
+          if len(fields) != len(pairs) or set(fields) != {"coder", "reviewer", "effort"}:
+              print("review-pass marker must name coder, reviewer, and effort")
+              sys.exit(1)
+
+          family = family_of(fields["coder"])
+          if family is None:
+              if skip_note:
+                  sys.exit(0)
+              print("unknown coder family requires a skip reason")
+              sys.exit(1)
+          _prefix, reviewer, floor = routes[family]
+          if fields["reviewer"] != reviewer:
+              print(f"wrong reviewer for coder family: expected {reviewer}")
+              sys.exit(1)
+          effort = fields["effort"]
+          if effort not in effort_order or effort_order.index(effort) < effort_order.index(floor):
+              print(f"review effort must be {floor} or greater")
+              sys.exit(1)
+          PY
+
+  copilot-review:
+    if: github.event.action == 'opened'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Request Copilot code review
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          if gh pr edit "$PR" --repo "$REPO" --add-reviewer @copilot; then
+            echo "Requested Copilot code review."
+          else
+            echo "::warning::Could not request Copilot code review (plan or permissions)."
+          fi

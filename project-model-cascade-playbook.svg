@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#F1EFE9"/>
+
+  <!-- flow line -->
+  <line x1="150" y1="337" x2="1050" y2="337" stroke="#D8D4C9" stroke-width="2"/>
+
+  <!-- Small model -->
+  <g>
+    <rect x="120" y="277" width="200" height="120" rx="10" fill="#FFFFFF" stroke="#2E5A4E" stroke-width="2"/>
+    <text x="220" y="330" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="500" fill="#1C1B19">Small</text>
+    <text x="220" y="356" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#6B6862">low cost</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 320 337 L 420 337" stroke="#9A968D" stroke-width="2" fill="none"/>
+  <path d="M 412 328 L 424 337 L 412 346" stroke="#9A968D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Gate 1 -->
+  <g>
+    <path d="M 460 337 L 500 300 L 540 337 L 500 374 Z" fill="#F1EFE9" stroke="#2E5A4E" stroke-width="2"/>
+    <text x="500" y="343" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2E5A4E">conf?</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 540 337 L 620 337" stroke="#9A968D" stroke-width="2" fill="none"/>
+  <path d="M 612 328 L 624 337 L 612 346" stroke="#9A968D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Medium model -->
+  <g>
+    <rect x="620" y="257" width="220" height="160" rx="10" fill="#FFFFFF" stroke="#2E5A4E" stroke-width="2"/>
+    <text x="730" y="325" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="500" fill="#1C1B19">Medium</text>
+    <text x="730" y="352" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#6B6862">balanced</text>
+  </g>
+
+  <!-- Arrow 3 (escalate up) -->
+  <path d="M 860 297 C 900 250, 940 220, 980 200" stroke="#9A968D" stroke-width="2" fill="none"/>
+  <path d="M 967 197 L 982 199 L 979 214" stroke="#9A968D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Large model -->
+  <g>
+    <rect x="980" y="120" width="180" height="150" rx="10" fill="#2E5A4E"/>
+    <text x="1070" y="188" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" font-weight="500" fill="#FAF9F6">Large</text>
+    <text x="1070" y="214" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#D8E4DF">high cost</text>
+  </g>
+
+  <!-- accepted path down from medium -->
+  <path d="M 860 397 C 900 440, 940 460, 980 470" stroke="#9A968D" stroke-width="2" fill="none"/>
+  <path d="M 967 468 L 982 470 L 975 485" stroke="#9A968D" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <rect x="980" y="410" width="180" height="120" rx="10" fill="#FFFFFF" stroke="#9A968D" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="1070" y="465" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="17" fill="#33312C">accepted</text>
+    <text x="1070" y="486" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#9A968D">response</text>
+  </g>
+
+  <text x="220" y="255" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.08em" fill="#9A968D">STAGE 1</text>
+  <text x="730" y="235" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.08em" fill="#9A968D">STAGE 2</text>
+  <text x="1070" y="98" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="0.08em" fill="#9A968D">STAGE 3</text>
+</svg>
