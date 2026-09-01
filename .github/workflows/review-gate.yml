@@ -18,6 +18,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fetch policy from base branch
+        # AGENTS.md is read from the base branch, not the PR's own checkout —
+        # otherwise a PR could rewrite its own review policy to self-approve.
+        run: |
+          git fetch --depth=1 origin "${{ github.event.pull_request.base.ref }}"
+          git show "origin/${{ github.event.pull_request.base.ref }}:AGENTS.md" > /tmp/base-agents.md 2>/dev/null || cp AGENTS.md /tmp/base-agents.md
+
       - name: Validate the review-pass marker
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
@@ -38,7 +45,7 @@ jobs:
           effort_order = ("low", "medium", "high", "xhigh", "max")
 
           try:
-              policy = Path("AGENTS.md").read_text()
+              policy = Path("/tmp/base-agents.md").read_text()
           except OSError as exc:
               print(f"cannot read AGENTS.md: {exc}")
               sys.exit(1)
