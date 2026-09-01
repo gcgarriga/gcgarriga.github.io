@@ -1,1 +1,4 @@
 .claude/
+# Added by seed-repo.sh so ignored seeded files remain visible.
+!/CLAUDE.md
+!/.github/copilot-instructions.md
