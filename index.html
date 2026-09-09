@@ -7,12 +7,13 @@
     <meta name="description" content="Gemma Garriga leads Applied AI Research at GitHub, working on the AI coding systems behind GitHub Copilot. Researcher, engineer, and entrepreneur working at the intersection of AI research and product.">
     <meta property="og:title" content="Gemma Garriga - Applied AI Research & Engineering">
     <meta property="og:description" content="Gemma Garriga leads Applied AI Research at GitHub, working on the AI coding systems behind GitHub Copilot.">
-    <meta property="og:image" content="https://gcgarriga.github.io/profile.png">
+    <meta property="og:image" content="https://gcgarriga.github.io/profile.jpg">
     <meta property="og:url" content="https://gcgarriga.github.io/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@gcgarriga">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232E5A4E'/><text x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='700' font-size='20' fill='%23FAF9F6'>G</text></svg>">
+    <link rel="preload" as="image" href="profile.webp" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +38,10 @@
         <header class="hero" id="hero">
             <div class="hero-top">
                 <div class="hero-photo-wrap">
-                    <img src="profile.png" alt="Gemma Garriga" class="hero-photo" loading="eager">
+                    <picture>
+                        <source srcset="profile.webp" type="image/webp">
+                        <img src="profile.jpg" alt="Gemma Garriga" class="hero-photo" width="432" height="500" loading="eager" fetchpriority="high" decoding="async">
+                    </picture>
                 </div>
                 <div class="hero-info">
                     <h1 class="hero-name">Gemma Garriga</h1>
@@ -108,7 +112,7 @@
                 <div class="project-grid">
 
                     <div class="project-card">
-                        <div class="project-thumb"><img src="project-kvlens.jpg" alt="KL Pareto across memory budgets, KVLens study result" loading="lazy"></div>
+                        <div class="project-thumb"><img src="project-kvlens.jpg" width="960" height="540" alt="KL Pareto across memory budgets, KVLens study result" loading="lazy" decoding="async"></div>
                         <div class="project-body">
                             <div class="project-heading">
                                 <h3>KVLens</h3>
@@ -120,7 +124,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-thumb"><img src="project-baremetal-ai-agent.png" alt="LLM, tool, and observation loop diagram for baremetal-ai-agent" loading="lazy"></div>
+                        <div class="project-thumb"><img src="project-baremetal-ai-agent.png" width="1200" height="675" alt="LLM, tool, and observation loop diagram for baremetal-ai-agent" loading="lazy" decoding="async"></div>
                         <div class="project-body">
                             <div class="project-heading">
                                 <h3>baremetal-ai-agent</h3>
@@ -132,7 +136,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-thumb"><img src="project-repo-radar.png" alt="Radar-chart visualization for repo-radar" loading="lazy"></div>
+                        <div class="project-thumb"><img src="project-repo-radar.png" width="1200" height="675" alt="Radar-chart visualization for repo-radar" loading="lazy" decoding="async"></div>
                         <div class="project-body">
                             <div class="project-heading">
                                 <h3>repo-radar</h3>
@@ -144,7 +148,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-thumb"><img src="project-gspec.png" alt="SPEC.md checklist mockup for gspec" loading="lazy"></div>
+                        <div class="project-thumb"><img src="project-gspec.png" width="1200" height="675" alt="SPEC.md checklist mockup for gspec" loading="lazy" decoding="async"></div>
                         <div class="project-body">
                             <div class="project-heading">
                                 <h3>gspec</h3>
@@ -156,7 +160,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-thumb"><img src="project-model-cascade-playbook.svg" alt="Model cascade routing diagram from three stages to an accepted response" loading="lazy"></div>
+                        <div class="project-thumb"><img src="project-model-cascade-playbook.svg" width="1200" height="675" alt="Model cascade routing diagram from three stages to an accepted response" loading="lazy" decoding="async"></div>
                         <div class="project-body">
                             <div class="project-heading">
                                 <h3>model-cascade-playbook</h3>
@@ -168,7 +172,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-thumb"><img src="project-butterfly-effect.jpg" alt="Generative visualization from the-butterfly-effect" loading="lazy"></div>
+                        <div class="project-thumb"><img src="project-butterfly-effect.jpg" width="960" height="540" alt="Generative visualization from the-butterfly-effect" loading="lazy" decoding="async"></div>
                         <div class="project-body">
                             <div class="project-heading">
                                 <h3>the-butterfly-effect</h3>
