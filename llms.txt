@@ -1,0 +1,59 @@
+# Gemma Garriga
+
+> Gemma Garriga leads Applied AI Research at GitHub, working on the AI coding
+> systems behind GitHub Copilot. Her team builds the foundations that make AI
+> agents practical at scale: evaluation systems that catch quality regressions
+> before they reach users, multi-agent architectures that improve task
+> completion while keeping token cost in check, and memory and context
+> platforms that cut the ramp-up cost of every new session.
+
+Before GitHub, Gemma built machine learning systems and teams in both industry
+and academia at Google, Allianz, INRIA, HIIT, and Aalto University. She is a
+co-founder of Parlapp, a former venture advisor at AV8 Ventures, and a fellow
+of Deeptech Labs.
+
+Canonical site: https://gcgarriga.github.io/
+
+## Topics
+
+Applied AI research, AI agents, large language model evaluation, AI coding
+assistants, multi-agent systems, post-training, model cascades, machine
+learning interpretability, AI developer workflows.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/gemmagarriga/): professional profile and contact
+- [GitHub](https://github.com/gcgarriga): open-source projects
+- [X](https://x.com/gcgarriga): short-form writing
+- [Google Scholar](https://scholar.google.com/citations?user=kqj9DigAAAAJ): peer-reviewed publications
+
+## Projects
+
+- [KVLens](https://github.com/gcgarriga/KVLens): a from-scratch PyTorch case study of KV-cache eviction strategies on Gemma 4
+- [baremetal-ai-agent](https://github.com/gcgarriga/baremetal-ai-agent): a tiny framework-free AI agent in Python — raw LLM calls, tool use, streaming, trajectories, replay, and evals
+- [repo-radar](https://github.com/gcgarriga/repo-radar): evidence-backed code taste reviews for repositories, as a GitHub Copilot CLI skill and reviewer subagent
+- [gspec](https://github.com/gcgarriga/gspec): a minimal spec-driven development skill for GitHub Copilot CLI
+- [model-cascade-playbook](https://github.com/gcgarriga/model-cascade-playbook): case studies for designing model cascades that route between small and large models on cost, confidence, and evaluation tradeoffs
+- [the-butterfly-effect](https://github.com/gcgarriga/the-butterfly-effect): abstract images generated from the real internals of GPT-2 — weights, attention, activations, loss surface, and embedding geometry
+
+## Ventures
+
+- [Parlapp](https://www.parlapp.net/) — Co-Founder: a marketplace for short, live voice exchanges between people who have something to share and people who want to learn. Built in Paris; went through the AWS Startup Loft Accelerator in 2021.
+- [AV8 Ventures](https://av8.vc/) — Venture Advisor: investments and due diligence, and direct work with early-stage founders on AI and data strategy, team structure, and product-market fit.
+- [Deeptech Labs](https://dtl.vc/) — Fellow: supporting startups building deeptech technology from first idea to shipped product.
+
+## Advisory
+
+- [Capgemini](https://www.capgemini.com/) — Advisory Board
+- [INSEAD](https://www.insead.edu/) — Alumni AI Advisory
+- [MCML](https://mcml.ai/) — Scientific Advisory Board
+- [Crane Ventures](https://crane.vc/) — CXO Advisory
+
+## Speaking
+
+Gemma speaks about shipping AI products, the teams that build them, what
+AI-first culture means, and what gets lost between research and product.
+
+- INSEAD Global AI Forum Series (INSEAD, 2025) — AI for developers: how applied research shapes the tools that millions of engineers use every day
+- ICON Innovation Week, Women in Tech (ICON, 2025)
+- Keynote, Women in Data Science (Swiss Re Centre for Global Dialogue, Zurich)
